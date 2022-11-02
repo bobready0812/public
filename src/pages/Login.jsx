@@ -16,7 +16,7 @@ export default function Login() {
    })
   }
 
-  const handleSubmit = async(e) => {
+  const handleLogin = async(e) => {
    e.preventDefault();
    try {
      const { data } = await axios.post("http://localhost:4000/login", {
@@ -45,10 +45,10 @@ export default function Login() {
   return ( 
     <div className='container'>
         <h2>Login Account</h2>
-        <form>
+        <form onSubmit={(e) => handleLogin(e)}>
           <div>
             <label htmlFor='email'>Email</label>
-            <input type="email" name="email" placeholder='Email' onChange={(e) => {setValues({...values,[e.target.value]:e.target.value})}}/>
+            <input type="email" name="email" placeholder='Email' onChange={(e) => {setValues({...values,[e.target.name]:e.target.value})}}/>
             {/* 공부 */}
           </div>
           <div>
