@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default function Secret() {
   const navigate = useNavigate(); 
-  const [cookies, setCookie, removeCookie] = useCookies([]);
+  const [cookies, setCookie, removeCookie] = useCookies([]); //공부하기
   useEffect(() => {
     const verifyUser = async () => {
       if(!cookies.jwt) {
@@ -18,8 +18,9 @@ export default function Secret() {
               withCredentials:true
             }
           );
+      
           if(!data.status) {
-            removeCookie("jwt")
+            removeCookie("jwt");
             navigate("/login");
           } else toast(`HI ${data.user}`, {theme:"dark"});
         };
@@ -29,16 +30,15 @@ export default function Secret() {
   }, [cookies, navigate, removeCookie]);
   const logOut = () => {
     removeCookie("jwt");
-    navigate("/register"); 
-
   }
 
   return (
-    
+    <>
     <div className='private'>
       <h1>Super Secret Page</h1>
       <button onClick={logOut}>Log Out</button>
-      <ToastContainer />
     </div>
+    <ToastContainer />
+    </>
   )
 }
