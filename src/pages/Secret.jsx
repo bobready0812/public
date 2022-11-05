@@ -10,9 +10,11 @@ export default function Secret() {
   useEffect(() => {
     const verifyUser = async () => {
       if(!cookies.jwt) {
+        
         navigate("/login");
 
        } else {
+       
           const {data} = await axios.post(
             "http://localhost:4000/",{}, {
               withCredentials:true
@@ -30,7 +32,7 @@ export default function Secret() {
   }, [cookies, navigate, removeCookie]);
   const logOut = () => {
     removeCookie("jwt");
-    navigate("/login");
+    navigate("/register");
   }
 
   return (

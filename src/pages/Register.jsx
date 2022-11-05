@@ -46,7 +46,7 @@ export default function Register() {
         <form onSubmit={(e) => handleSubmit(e)}>
           <div>
             <label htmlFor='email'>Email</label>
-            <input type="email" name="email" placeholder='Email' onChange={(e) => {setValues({...values,[e.target.name ]:e.target.value})}}/>
+            <input type="email" name="email" placeholder='Email' onChange={(e) => {setValues({...values,[e.target.name]:e.target.value})}}/>
           </div>
           <div>
             <label htmlFor='password'>password</label>
