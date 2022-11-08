@@ -19,15 +19,15 @@ export default function Login() {
   const handleLogin = async(e) => {
    e.preventDefault();
    try {
-     const { datas } = await axios.post("http://localhost:4000/login", {
+     const { data } = await axios.post("http://localhost:4000/login", {
        ...values,
      }, {
        withCredentials:true,
      });
-     console.log(datas);
-     if(datas) {
-       if(datas.errors) {
-         const {email,password} = datas.errors;
+     console.log(data);
+     if(data) {
+       if(data.errors) {
+         const {email,password} = data.errors;
          if(email) generate(email);
          else if (password) generate(password);
        } else {
