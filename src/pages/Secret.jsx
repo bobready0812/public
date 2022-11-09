@@ -32,7 +32,7 @@ export default function Secret() {
   }, [cookies, navigate, removeCookie]);
   const logOut = () => {
     removeCookie("jwt");
-    navigate("/register");
+    navigate("/login");
   }
 
   return (
