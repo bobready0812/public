@@ -21,10 +21,11 @@ export default function Secret() {
             }
           );
       
-          if(!data.status) {
+           if(!data.status) {
             removeCookie("jwt");
             navigate("/login");
-          } else toast(`HI ${data.user}`, {theme:"dark"});
+          } else if
+          toast(`HI ${data.user}`, {theme:"dark"});
         };
       };
       verifyUser();
