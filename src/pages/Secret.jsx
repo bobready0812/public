@@ -24,7 +24,7 @@ export default function Secret() {
            if(!data.status) {
             removeCookie("jwt");
             navigate("/login");
-          } else if
+          } else 
           toast(`HI ${data.user}`, {theme:"dark"});
         };
       };
