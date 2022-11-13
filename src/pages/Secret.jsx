@@ -24,8 +24,16 @@ export default function Secret() {
            if(!data.status) {
             removeCookie("jwt");
             navigate("/login");
-          } else 
+          } else if (data.status == "re") {
+            const {data} = await axios.post(
+              "http://localhost:4000/",{}, {
+                withCredentials:true
+              }
+            );
+          } else {
+
           toast(`HI ${data.user}`, {theme:"dark"});
+          }
         };
       };
       verifyUser();
