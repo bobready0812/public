@@ -21,13 +21,19 @@ export default function Secret() {
             }
           );
       
-           if(!data.status) {
+           if(data.status === false) {
             removeCookie("jwt");
             navigate("/login");
           } 
-          else {
-
-          toast(`HI ${data.user}`, {theme:"dark"});
+          else if (data.status === "re"){
+            removeCookie("jwt");
+            const data2 = await axios.post(
+              "http://localhost:4000/",{}, {
+                withCredentials:true
+              }
+            );
+          } else {
+            toast(`HI ${data.user}`, {theme:"dark"}); 
           }
         };
       };
