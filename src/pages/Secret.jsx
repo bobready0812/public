@@ -25,14 +25,7 @@ export default function Secret() {
             removeCookie("jwt");
             navigate("/login");
           } 
-          else if (data.status === "re"){
-            removeCookie("jwt");
-            const data2 = await axios.post(
-              "http://localhost:4000/",{}, {
-                withCredentials:true
-              }
-            );
-          } else {
+         else {
             toast(`HI ${data.user}`, {theme:"dark"}); 
           }
         };
