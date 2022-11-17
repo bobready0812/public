@@ -25,6 +25,8 @@ export default function Secret() {
             removeCookie("jwt");
             navigate("/login");
           } 
+          else if(data.status === "no") {
+          }
          else {
             toast(`HI ${data.user}`, {theme:"dark"}); 
           }
