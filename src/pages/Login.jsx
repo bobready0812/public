@@ -44,7 +44,7 @@ export default function Login() {
 
   return ( 
     <div className='container'>
-        <h2>Login Account</h2>
+        <h2>Login</h2>
         <form onSubmit={(e) => handleLogin(e)}>
           <div>
             <label htmlFor='email'>Email</label>
