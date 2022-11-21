@@ -52,7 +52,7 @@ export default function Login() {
             {/* 공부 */}
           </div>
           <div>
-            <label htmlFor='password'>password enter</label>
+            <label htmlFor='password'>password</label>
             <input type="password" name="password" placeholder='Password' onChange={(e)=>{setValues({...values,[e.target.name]:e.target.value})} }/>
           </div>
         <button type="submit">Submit</button>
