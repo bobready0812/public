@@ -10,7 +10,7 @@ export default function Login() {
    password:"",
   })
 
-  const generate = (err) => {
+  const generateError = (err) => {
    toast.error(err,{
      position:"bottom-right",
    })
@@ -28,7 +28,7 @@ export default function Login() {
      if(data) {
        if(data.errors) {
          const {email,password} = data.errors;
-         if(email) generate(email);
+         if(email) generateError(email);
          else if (password) generate(password);
        } else {
            navigate("/");
