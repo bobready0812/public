@@ -10,8 +10,8 @@ export default function Login() {
    password:"",
   })
 
-  const generateError = (err) => {
-   toast.error(err,{
+  const generateError = (error) => {
+   toast.error(error,{
      position:"bottom-right",
    })
   }
