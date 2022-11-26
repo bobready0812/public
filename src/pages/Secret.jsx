@@ -17,7 +17,7 @@ export default function Secret() {
        
           const {data} = await axios.post(
             "http://localhost:4000/",{}, {
-             with
+             withCredentials:true
             }
           );
       
