@@ -43,7 +43,7 @@ export default function Secret() {
   return (
     <>
     <div className='private'>
-      <h1>Super Secret Pages</h1>
+      <h1>Secret Page</h1>
       <button onClick={logOut}>Log Out</button>
     </div>
     <ToastContainer />
