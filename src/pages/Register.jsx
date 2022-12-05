@@ -12,7 +12,7 @@ export default function Register() {
 
    const generate = (err) => {
     toast.error(err,{
-      position:"bottom-right",
+      
     })
    }
 
