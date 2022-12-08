@@ -10,7 +10,9 @@ export default function Register() {
     password:"",
    })
 
-   
+   const generate = () => {
+    
+   }
 
    const handleSubmit = async(e) => {
     e.preventDefault();
