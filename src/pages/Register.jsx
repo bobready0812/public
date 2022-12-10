@@ -11,7 +11,7 @@ export default function Register() {
    })
 
    const generate = () => {
-     c
+     const e = (z);
    }
 
    const handleSubmit = async(e) => {
