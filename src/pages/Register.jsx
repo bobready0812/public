@@ -11,7 +11,7 @@ export default function Register() {
    })
 
    const generate = () => {
-     
+     please
    }
 
    const handleSubmit = async(e) => {
