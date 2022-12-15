@@ -11,7 +11,7 @@ export default function Register() {
    })
 
    const generate = () => {
-    const a = 10;
+    const a = 10
     for(i=0; i<=10; i++) {
       console.log(a);
     }
