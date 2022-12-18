@@ -7,7 +7,7 @@ export default function Register() {
   const navigate = useNavigate();
    const [values, setValues] = useState({
     email:"", 
-    password:"",
+    password:"",ws
    })
 
   
