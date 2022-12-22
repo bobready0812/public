@@ -5,7 +5,7 @@ import {ToastContainer, toast} from 'react-toastify';
 
   
 
-   const handleSubmit = async(e) => {
+   const handleSubmit = async() => {
     e.preventDefault();
     try {
       const { data } = await axios.post("http://localhost:4000/register", {
