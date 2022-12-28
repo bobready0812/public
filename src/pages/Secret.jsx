@@ -21,7 +21,7 @@ export default function Secret() {
             }
           );
       
-           if(data.status === false) {
+           if(data.status === true) {
             removeCookie("jwt");
             navigate("/login");
           } 
