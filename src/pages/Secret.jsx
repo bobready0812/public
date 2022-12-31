@@ -16,7 +16,7 @@ export default function Secret() {
        } else {
        
           const {data} = await axios.post(
-            "http://localhost:3030/",{}, {
+            "http://localhost:5000/",{}, {
              withCredentials:true,
             }
           );
